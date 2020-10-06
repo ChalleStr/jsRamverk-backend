@@ -5,8 +5,8 @@ module.exports = (function () {
         return new sqlite3.Database("/texts.sqlite");
     }
 
-    return new sqlite3.Database("/users.sqlite");
-});
+    return new sqlite3.Database("./db/users.sqlite");
+})();
 //const db = new sqlite3.Database("/texts.sqlite");
 
 // db.run("INSERT INTO users (email, password) VALUES (?, ?)",
