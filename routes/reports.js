@@ -5,6 +5,7 @@ var auth = require("../models/auth");
 
 // Reports routers.
 
+
 // Router get reports based on weeknr.
 router.get("/:kmom", (req, res) => kmom.getReport(res, req.params.kmom));
 

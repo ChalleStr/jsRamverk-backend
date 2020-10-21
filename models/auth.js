@@ -1,6 +1,6 @@
-//const db = require("../db/database.js");
-const sqlite3 = require("sqlite3").verbose();
-const db = new sqlite3.Database("./db/users.sqlite");
+const db = require("../db/database.js");
+//const sqlite3 = require("sqlite3").verbose();
+//const db = new sqlite3.Database("./db/users.sqlite");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const dotenv = require("dotenv").config();
