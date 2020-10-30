@@ -21,7 +21,7 @@ const auth = {
                     status: 401,
                     source: "/register",
                     title: "Please enter missing email or password",
-                    detail: "Email pr password missing in request"
+                    detail: "Email or password missing in request"
                 }
             });
         }

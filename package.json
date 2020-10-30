@@ -4,19 +4,30 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "pretest": "bash db/reset_test_db.bash",
+    "test": "nyc --reporter=html --reporter=text --reporter=clover mocha --timeout 10000",
     "start": "nodemon app.js",
+    "clean": "rm -rf node_modules package-lock.json",
     "production": "NODE_ENV='production' node app.js"
   },
   "author": "Charlotte Strand",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "chai": "^4.2.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "morgan": "^1.10.0",
     "sqlite3": "^5.0.0"
+  },
+  "devDependencies": {
+    "chai": "*",
+    "chai-http": "^4.3.0",
+    "eslint": "^7.11.0",
+    "javascript-style-guide": "^1.0.1",
+    "mocha": "^8.2.0",
+    "nyc": "^15.1.0"
   }
 }

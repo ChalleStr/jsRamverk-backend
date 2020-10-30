@@ -91,12 +91,14 @@ const kmom = {
                         errors: {
                             status: 500,
                             source: "PUT /update",
+                            title: "Week_nr not in database.",
                             detail: err.message
                         }
                     });
                 }
-
-                return res.json({
+                // Ändra tillbaka till nedanstående om 204 kraschar koden...
+                //return res.json()({
+                return res.status(204).json({
                     data: {
                         message: "Updated!"
                     }
