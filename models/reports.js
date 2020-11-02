@@ -91,11 +91,21 @@ const kmom = {
                         errors: {
                             status: 500,
                             source: "PUT /update",
-                            title: "Week_nr not in database.",
+                            title: "Database error.",
                             detail: err.message
                         }
                     });
                 }
+                // if (!weekNr) {
+                //     return res.status(401).json({
+                //         errors: {
+                //             status: 401,
+                //             source: "",
+                //             title: "WeekNr not in database.",
+                //             detail: "WeekNr not in database."
+                //         }
+                //     });
+                // }
                 // Ändra tillbaka till nedanstående om 204 kraschar koden...
                 //return res.json()({
                 return res.status(204).json({
