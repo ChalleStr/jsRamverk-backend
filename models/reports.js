@@ -96,19 +96,9 @@ const kmom = {
                         }
                     });
                 }
-                // if (!weekNr) {
-                //     return res.status(401).json({
-                //         errors: {
-                //             status: 401,
-                //             source: "",
-                //             title: "WeekNr not in database.",
-                //             detail: "WeekNr not in database."
-                //         }
-                //     });
-                // }
                 // Ändra tillbaka till nedanstående om 204 kraschar koden...
-                //return res.json()({
-                return res.status(204).json({
+                return res.json()({
+                // return res.status(204).json({
                     data: {
                         message: "Updated!"
                     }
