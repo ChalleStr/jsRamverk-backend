@@ -1,10 +1,10 @@
 build:
     nodes:
-        #analysis:
         coverage:
             tests:
                 override:
-                - command: npm test
-                coverage:
-                    file: coverage/clover.xml
-                    format: clover
+                    - js-scrutinizer-run
+                    - command: npm run test
+                        coverage:
+                            file: coverage/clover.xml
+                            format: clover
