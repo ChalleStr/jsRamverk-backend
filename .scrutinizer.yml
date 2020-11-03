@@ -1,6 +1,7 @@
 build:
     nodes:
-        analysis:
+        #analysis:
+        coverage:
             tests:
                 override:
                     - command: npm test
