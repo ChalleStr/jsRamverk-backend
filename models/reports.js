@@ -97,9 +97,10 @@ const kmom = {
                     });
                 }
                 // Ändra tillbaka till nedanstående om 204 kraschar koden...
-                return res.json()({
+                return res.status(200).json({
                 // return res.status(204).json({
                     data: {
+                        status: 200,
                         message: "Updated!"
                     }
                 });
