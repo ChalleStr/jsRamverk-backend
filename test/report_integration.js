@@ -258,11 +258,7 @@ describe("Reports", () => {
     });
 
     describe("PUT /reports/update", () => {
-        it("should get 204 HAPPY PATH changing kmomText", (done) => {
-            // let user = {
-            //     email: "test@report.com",
-            //     password: "testingreports"
-            // };
+        it("should get 200 HAPPY PATH changing kmomText", (done) => {
             let report = {
                 week_nr: 1,
                 kmom_text: "Updated testreport 1"
@@ -273,53 +269,12 @@ describe("Reports", () => {
                 .set("x-access-token", token)
                 .send(report)
                 .end((err, res) => {
-                    res.should.have.status(204);
-                    // res.body.should.have.property("data");
-                    // res.body.data.should.have.property("message");
-                    // res.body.data.message.should.equal("Updated!");
+                    res.should.have.status(200);
 
                 done();
                 });
 
-            // chai.request(server)
-            //     .post("/login")
-            //     .send(user)
-            //     .end((err, res) => {
-            //
-            //     chai.request(server)
-            //         .put("/reports/update")
-            //         .set("x-access-token", token)
-            //         .send(report)
-            //         .end((err, res) => {
-            //             res.should.have.status(204);
-            //             // res.body.should.have.property("data");
-            //             // res.body.data.should.have.property("message");
-            //             // res.body.data.message.should.equal("Updated!");
-            //
-            //             //done();
-            //         });
-            //     done();
-            // });
         });
     });
 
-    //     it("should get 401 as weekNr does not exist in db", (done) => {
-    //         let report = {
-    //             week_nr: 2,
-    //             kmom_text: "Testing reports status 401."
-    //         };
-    //
-    //         chai.request(server)
-    //             .put("/reports/update")
-    //             .set("x-access-token", token)
-    //             .send(report)
-    //             .end((err, res) => {
-    //                 res.should.have.status(401);
-    //                 res.body.should.have.property("errors");
-    //                 res.body.errors.should.have.property("title");
-    //                 res.body.errors.title.should.equal("WeekNr not in database.")
-    //                 done();
-    //         });
-    //
-    // });
 });
